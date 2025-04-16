@@ -10,6 +10,7 @@ WORKDIR /ros_ws/
     # git clone https://github.com/yuanluochen/rm_gimbal_description --depth=1 && \
     # git clone https://github.com/yuanluochen/rm_serial_driver --depth=1 && \
     # git clone https://github.com/yuanluochen/rm_vision --depth=1
+# 自用
 RUN git clone https://github.com/yuanluochen/auto-aim.git --depth=1
 RUN mv auto-aim\ src\ 
 # install dependencies and some tools
