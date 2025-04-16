@@ -1,0 +1,13 @@
+{
+  "package_name": "auto_aim_interfaces",
+  "non_idl_tuples": [
+    "/home/hsq/code/auto-arm/rm-vision/src/rm_auto_aim-main/auto_aim_interfaces:msg/Armor.msg",
+    "/home/hsq/code/auto-arm/rm-vision/src/rm_auto_aim-main/auto_aim_interfaces:msg/Armors.msg",
+    "/home/hsq/code/auto-arm/rm-vision/src/rm_auto_aim-main/auto_aim_interfaces:msg/Target.msg",
+    "/home/hsq/code/auto-arm/rm-vision/src/rm_auto_aim-main/auto_aim_interfaces:msg/DebugLight.msg",
+    "/home/hsq/code/auto-arm/rm-vision/src/rm_auto_aim-main/auto_aim_interfaces:msg/DebugLights.msg",
+    "/home/hsq/code/auto-arm/rm-vision/src/rm_auto_aim-main/auto_aim_interfaces:msg/DebugArmor.msg",
+    "/home/hsq/code/auto-arm/rm-vision/src/rm_auto_aim-main/auto_aim_interfaces:msg/DebugArmors.msg",
+    "/home/hsq/code/auto-arm/rm-vision/src/rm_auto_aim-main/auto_aim_interfaces:msg/TrackerInfo.msg"
+  ]
+}

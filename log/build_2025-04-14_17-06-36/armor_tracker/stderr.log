@@ -1,0 +1,22 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:40[m[K,
+                 from [01m[K/home/hsq/code/auto-arm/rm-vision/src/rm_auto_aim-main/armor_tracker/include/armor_tracker/tracker_node.hpp:7[m[K,
+                 from [01m[K/home/hsq/code/auto-arm/rm-vision/src/rm_auto_aim-main/armor_tracker/src/tracker_node.cpp:2[m[K:
+[01m[K/home/hsq/code/auto-arm/rm-vision/src/rm_auto_aim-main/armor_tracker/src/tracker_node.cpp:[m[K In member function ‘[01m[Kvoid rm_auto_aim::ArmorTrackerNode::armorsCallback(auto_aim_interfaces::msg::Armors_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/hsq/code/auto-arm/rm-vision/src/rm_auto_aim-main/armor_tracker/src/tracker_node.cpp:200:68:[m[K [01;31m[Kerror: [m[K‘[01m[Karmor[m[K’ was not declared in this scope
+  200 | this->get_logger(), "变换， x:%.2f, y:%.2f, z:%.2f", [01;31m[Karmor[m[K.pose.x, armor.pose.y, armor.pose.z);
+      |                                                      [01;31m[K^~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/armor_tracker.dir/build.make:104：CMakeFiles/armor_tracker.dir/src/tracker_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/armor_tracker.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

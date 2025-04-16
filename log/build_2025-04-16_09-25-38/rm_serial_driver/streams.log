@@ -1,0 +1,42 @@
+[0.020s] Invoking command in '/home/hsq/code/auto-arm/rm-vision/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/hsq/code/auto-arm/rm-vision/build/rm_serial_driver -- -j12 -l12
+[0.106s] [ 40%] Built target rm_serial_driver_node
+[0.115s] [ 60%] [32mBuilding CXX object CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o[0m
+[14.647s] [ 80%] [32m[1mLinking CXX shared library librm_serial_driver.so[0m
+[15.941s] [100%] Built target rm_serial_driver
+[15.955s] Invoked command in '/home/hsq/code/auto-arm/rm-vision/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/hsq/code/auto-arm/rm-vision/build/rm_serial_driver -- -j12 -l12
+[15.958s] Invoking command in '/home/hsq/code/auto-arm/rm-vision/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/hsq/code/auto-arm/rm-vision/build/rm_serial_driver
+[15.968s] -- Install configuration: ""
+[15.968s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/lib/rm_serial_driver/rm_serial_driver_node
+[15.968s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/include
+[15.968s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/include/rm_serial_driver
+[15.968s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/include/rm_serial_driver/rm_serial_driver.hpp
+[15.968s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/include/rm_serial_driver/packet.hpp
+[15.968s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/include/rm_serial_driver/crc.hpp
+[15.968s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.sh
+[15.969s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.dsv
+[15.969s] -- Installing: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/lib/librm_serial_driver.so
+[15.978s] -- Set runtime path of "/home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/lib/librm_serial_driver.so" to ""
+[15.978s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/config
+[15.978s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/config/serial_driver.yaml
+[15.978s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/launch
+[15.978s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/launch/serial_driver.launch.py
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/ament_index/resource_index/package_run_dependencies/rm_serial_driver
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/ament_index/resource_index/parent_prefix_path/rm_serial_driver
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.sh
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.dsv
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/environment/path.sh
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/environment/path.dsv
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/local_setup.bash
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/local_setup.sh
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/local_setup.zsh
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/local_setup.dsv
+[15.979s] -- Installing: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/package.dsv
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/ament_index/resource_index/packages/rm_serial_driver
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/ament_index/resource_index/rclcpp_components/rm_serial_driver
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[15.979s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[15.980s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig.cmake
+[15.980s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig-version.cmake
+[15.980s] -- Up-to-date: /home/hsq/code/auto-arm/rm-vision/install/rm_serial_driver/share/rm_serial_driver/package.xml
+[15.982s] Invoked command in '/home/hsq/code/auto-arm/rm-vision/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/hsq/code/auto-arm/rm-vision/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/hsq/code/auto-arm/rm-vision/build/rm_serial_driver
