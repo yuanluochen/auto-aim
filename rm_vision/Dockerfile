@@ -5,12 +5,13 @@ RUN mkdir -p /ros_ws/src
 WORKDIR /ros_ws/
 
 # clone projects
-RUN cd src && git clone https://github.com/yuanluochen/rm_auto_aim --depth=1 && \
-    git clone https://github.com/yuanluochen/ros2_hik_camera --depth=1 && \
-    git clone https://github.com/yuanluochen/rm_gimbal_description --depth=1 && \
-    git clone https://github.com/yuanluochen/rm_serial_driver --depth=1 && \
-    git clone https://github.com/yuanluochen/rm_vision --depth=1
-
+# RUN cd src && git clone https://github.com/yuanluochen/rm_auto_aim --depth=1 && \
+    # git clone https://github.com/yuanluochen/ros2_hik_camera --depth=1 && \
+    # git clone https://github.com/yuanluochen/rm_gimbal_description --depth=1 && \
+    # git clone https://github.com/yuanluochen/rm_serial_driver --depth=1 && \
+    # git clone https://github.com/yuanluochen/rm_vision --depth=1
+RUN git clone https://github.com/yuanluochen/auto-aim.git --depth=1
+RUN mv auto-aim\ src\ 
 # install dependencies and some tools
 RUN apt-get update && rosdep install --from-paths src --ignore-src -r -y && \
     apt-get install ros-humble-foxglove-bridge wget htop vim -y && \
