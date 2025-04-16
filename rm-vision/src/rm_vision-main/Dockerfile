@@ -5,12 +5,11 @@ RUN mkdir -p /ros_ws/src
 WORKDIR /ros_ws/
 
 # clone projects
-RUN cd src && git clone https://github.com/chenjunnn/rm_auto_aim --depth=1 && \
-    git clone https://github.com/chenjunnn/ros2_mindvision_camera --depth=1 && \
-    git clone https://github.com/chenjunnn/ros2_hik_camera --depth=1 && \
-    git clone https://github.com/chenjunnn/rm_gimbal_description --depth=1 && \
-    git clone https://github.com/chenjunnn/rm_serial_driver --depth=1 && \
-    git clone https://github.com/chenjunnn/rm_vision --depth=1
+RUN cd src && git clone https://github.com/yuanluochen/rm_auto_aim --depth=1 && \
+    git clone https://github.com/yuanluochen/ros2_hik_camera --depth=1 && \
+    git clone https://github.com/yuanluochen/rm_gimbal_description --depth=1 && \
+    git clone https://github.com/yuanluochen/rm_serial_driver --depth=1 && \
+    git clone https://github.com/yuanluochen/rm_vision --depth=1
 
 # install dependencies and some tools
 RUN apt-get update && rosdep install --from-paths src --ignore-src -r -y && \
@@ -24,7 +23,9 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
     -p https://github.com/zsh-users/zsh-syntax-highlighting && \
     chsh -s /bin/zsh && \
     rm -rf /var/lib/apt/lists/*
-
+# 
+RUN apt-get update -y && apt-get upgrade -y
+RUN apt-get install ros-humble-asio-cmake-module
 # build
 RUN . /opt/ros/humble/setup.sh && colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 
