@@ -134,7 +134,7 @@ void ArmorDetectorNode::imageCallback(const sensor_msgs::msg::Image::ConstShared
 
         // Fill the markers
         armor_marker_.id++;
-        armor_marker_.scale.y = armor.type == ArmorType::SMALL ? 0.135 : 0.230;
+        armor_marker_.scale.y = armor.type == ArmorType::SMALL ? 0.135 : 0.23;
         armor_marker_.pose = armor_msg.pose;
         text_marker_.id++;
         text_marker_.pose.position = armor_msg.pose.position;
@@ -166,14 +166,14 @@ std::unique_ptr<Detector> ArmorDetectorNode::initDetector()
   int binary_thres = declare_parameter("binary_thres", 160, param_desc);
 
   param_desc.description = "0-RED, 1-BLUE";
-  param_desc.integer_range[0].from_value = 1;
-  param_desc.integer_range[0].to_value = 0;
+  param_desc.integer_range[0].from_value = 0;
+  param_desc.integer_range[0].to_value = 1;
   auto detect_color = declare_parameter("detect_color", RED, param_desc);
 
   Detector::LightParams l_params = {
     .min_ratio = declare_parameter("light.min_ratio", 0.1),
     .max_ratio = declare_parameter("light.max_ratio", 0.4),
-    .max_angle = declare_parameter("light.max_angle", 50.0)};
+    .max_angle = declare_parameter("light.max_angle", 40.0)};
 
   Detector::ArmorParams a_params = {
     .min_light_ratio = declare_parameter("armor.min_light_ratio", 0.7),
@@ -189,7 +189,7 @@ std::unique_ptr<Detector> ArmorDetectorNode::initDetector()
   auto pkg_path = ament_index_cpp::get_package_share_directory("armor_detector");
   auto model_path = pkg_path + "/model/mlp.onnx";
   auto label_path = pkg_path + "/model/label.txt";
-  double threshold = this->declare_parameter("classifier_threshold", 0.75);
+  double threshold = this->declare_parameter("classifier_threshold", 0.7);
   std::vector<std::string> ignore_classes =
     this->declare_parameter("ignore_classes", std::vector<std::string>{"negative"});
   detector->classifier =

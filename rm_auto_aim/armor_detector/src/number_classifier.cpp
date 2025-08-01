@@ -33,8 +33,7 @@ NumberClassifier::NumberClassifier(
 
   std::ifstream label_file(label_path);
   std::string line;
-  while (std::getline(label_file, line)) 
-  {
+  while (std::getline(label_file, line)) {
     class_names_.push_back(line);
   }
 }
@@ -71,7 +70,7 @@ void NumberClassifier::extractNumbers(const cv::Mat & src, std::vector<Armor> & 
 
     // Get ROI
     number_image =
-      number_image(cv::Rect(cv::Point((warp_width - roi_size.width) / 2, 0), roi_size));//最远的顶点，和长宽
+      number_image(cv::Rect(cv::Point((warp_width - roi_size.width) / 2, 0), roi_size));
 
     // Binarize
     cv::cvtColor(number_image, number_image, cv::COLOR_RGB2GRAY);
@@ -83,24 +82,23 @@ void NumberClassifier::extractNumbers(const cv::Mat & src, std::vector<Armor> & 
 
 void NumberClassifier::classify(std::vector<Armor> & armors)
 {
-  for (auto & armor : armors)
- {
+  for (auto & armor : armors) {
     cv::Mat image = armor.number_img.clone();
 
     // Normalize
     image = image / 255.0;
 
     // Create blob from image
-    cv::Mat blob;//blob是二进制数据块
-    cv::dnn::blobFromImage(image, blob);//图像预处理减少光照差异
+    cv::Mat blob;
+    cv::dnn::blobFromImage(image, blob);
 
     // Set the input blob for the neural network
-    net_.setInput(blob);//将图像音频等转换为神经网络模型可以处理的格式
+    net_.setInput(blob);
     // Forward pass the image blob through the model
     cv::Mat outputs = net_.forward();
 
     // Do softmax
-    float max_prob = *std::max_element(outputs.begin<float>(), outputs.end<float>());//返回的是指针所以要解指针，返回最大值
+    float max_prob = *std::max_element(outputs.begin<float>(), outputs.end<float>());
     cv::Mat softmax_prob;
     cv::exp(outputs - max_prob, softmax_prob);
     float sum = static_cast<float>(cv::sum(softmax_prob)[0]);

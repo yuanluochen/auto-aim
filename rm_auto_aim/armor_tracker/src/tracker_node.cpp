@@ -74,7 +74,7 @@ ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions & options)
     // clang-format on
     return h;
   };
-  // update_Q - process noise covariance matrix过程噪声协方差矩阵
+  // update_Q - process noise covariance matrix
   s2qxyz_ = declare_parameter("ekf.sigma2_q_xyz", 20.0);
   s2qyaw_ = declare_parameter("ekf.sigma2_q_yaw", 100.0);
   s2qr_ = declare_parameter("ekf.sigma2_q_r", 800.0);
@@ -129,14 +129,12 @@ ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions & options)
   // Subscriber with tf2 message_filter
   // tf2 relevant
   tf2_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock());
-  
   // Create the timer interface before call to waitForTransform,
   // to avoid a tf2_ros::CreateTimerInterfaceException exception
   auto timer_interface = std::make_shared<tf2_ros::CreateTimerROS>(
     this->get_node_base_interface(), this->get_node_timers_interface());
   tf2_buffer_->setCreateTimerInterface(timer_interface);
   tf2_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf2_buffer_);
-
   // subscriber and filter
   armors_sub_.subscribe(this, "/detector/armors", rmw_qos_profile_sensor_data);
   target_frame_ = this->declare_parameter("target_frame", "odom");

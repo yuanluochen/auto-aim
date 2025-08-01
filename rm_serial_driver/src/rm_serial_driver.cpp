@@ -32,12 +32,12 @@ RMSerialDriver::RMSerialDriver(const rclcpp::NodeOptions & options)
 
   getParams();
 
-  // TF broadcaster用tf来完成坐标轴的转换
-  timestamp_offset_ = this->declare_parameter("timestamp_offset", 0.0);//时间戳偏移
+  // TF broadcaster
+  timestamp_offset_ = this->declare_parameter("timestamp_offset", 0.0);
   tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
 
   // Create Publisher
-  latency_pub_ = this->create_publisher<std_msgs::msg::Float64>("/latency", 10);//转换坐标的延迟时间
+  latency_pub_ = this->create_publisher<std_msgs::msg::Float64>("/latency", 10);
   marker_pub_ = this->create_publisher<visualization_msgs::msg::Marker>("/aiming_point", 10);
 
   // Detect parameter client
@@ -133,8 +133,7 @@ void RMSerialDriver::receiveData()
             aiming_point_.header.stamp = this->now();
             aiming_point_.pose.position.x = packet.aim_x;
             aiming_point_.pose.position.y = packet.aim_y;
-            aiming_point_.pose.position.z = packet.aim_z
-            ;
+            aiming_point_.pose.position.z = packet.aim_z;
             marker_pub_->publish(aiming_point_);
           }
         } else {
@@ -173,7 +172,8 @@ void RMSerialDriver::sendData(const auto_aim_interfaces::msg::Target::SharedPtr 
     packet.r1 = msg->radius_1;
     packet.r2 = msg->radius_2;
     packet.dz = msg->dz;
-    packet.p = msg->p*100;
+    packet.p = msg->p*100;//数据放大一点，便于观察
+    packet.latency_time = (this->now() - msg->header.stamp).seconds();
     crc16::Append_CRC16_Check_Sum(reinterpret_cast<uint8_t *>(&packet), sizeof(packet));
 
     std::vector<uint8_t> data = toVector(packet);

@@ -1,8 +1,0 @@
-<launch>
-  <include file="$(find-pkg-share foxglove_bridge)/launch/foxglove_bridge_launch.xml">
-    <arg name="port" value="8765"/>
-    <arg name="send_buffer_limit" value="1000000000000"/>
-    <arg name="use_compression" value="true"/>
-
-  </include>
-</launch>

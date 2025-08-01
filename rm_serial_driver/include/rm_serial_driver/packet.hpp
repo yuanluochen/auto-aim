@@ -44,6 +44,7 @@ struct SendPacket
   float r2;
   float dz;
   float p;
+  float latency_time;//延迟时间单位为秒
   uint16_t checksum = 0;
 } __attribute__((packed));
 
