@@ -5,8 +5,8 @@ RUN mkdir -p /ros_ws
 WORKDIR /ros_ws/
 
 # clone projects
-RUN cd /ros_ws && git clone https://github.com/yuanluochen/auto-aim.git --depth=1 && \
-    mv auto-aim src
+RUN cd /ros_ws && git clone https://github.com/yuanluochen/qiqi_rm_vision.git --depth=1 && \
+    mv qiqi_rm_vision src
 
 # install dependencies and some tools
 RUN apt-get update && rosdep install --from-paths src --ignore-src -r -y && \
