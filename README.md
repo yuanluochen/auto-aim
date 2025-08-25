@@ -55,7 +55,7 @@ docker volume rm ws
 
 ==前情提要：本实验室内电控整体工程中已完成添加该部分代码，可以不用自行添加到工程内部。以下内容为简要介绍如何添加该部分代码，由于各个队伍的电控工程结构差异较大，以下流程仅供参考。==
 
-1. 下载电控部分代码，[点击进入电控代码部分连接](https://github.com/yuanluochen/vision_task)，或者输入以下指令克隆电控部分代码。
+1. 下载电控部分代码，[点击进入电控代码部分链接](https://github.com/yuanluochen/vision_task)，或者输入以下指令克隆电控部分代码。
 ```bash
 git clone https://github.com/yuanluochen/vision_task.git
 ```
