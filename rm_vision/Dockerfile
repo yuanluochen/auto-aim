@@ -1,20 +1,16 @@
 FROM ros:humble-ros-base
 
 # create workspace
-RUN mkdir -p /ros_ws/src
+RUN mkdir -p /ros_ws
 WORKDIR /ros_ws/
 
 # clone projects
-RUN cd src && git clone https://github.com/chenjunnn/rm_auto_aim --depth=1 && \
-    git clone https://github.com/chenjunnn/ros2_mindvision_camera --depth=1 && \
-    git clone https://github.com/chenjunnn/ros2_hik_camera --depth=1 && \
-    git clone https://github.com/chenjunnn/rm_gimbal_description --depth=1 && \
-    git clone https://github.com/chenjunnn/rm_serial_driver --depth=1 && \
-    git clone https://github.com/chenjunnn/rm_vision --depth=1
+RUN cd /ros_ws && git clone https://github.com/yuanluochen/auto-aim.git --depth=1 && \
+    mv auto-aim src
 
 # install dependencies and some tools
 RUN apt-get update && rosdep install --from-paths src --ignore-src -r -y && \
-    apt-get install ros-humble-foxglove-bridge wget htop vim -y && \
+    apt-get install ros-humble-foxglove-bridge ros-humble-asio-cmake-module wget htop vim -y && \
     rm -rf /var/lib/apt/lists/*
 
 # setup zsh

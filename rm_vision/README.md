@@ -32,12 +32,6 @@ HikVision 相机模块 https://github.com/chenjunnn/ros2_hik_camera
 
 ## 通过 Docker 部署
 
-拉取镜像
-
-```
-docker pull chenjunnn/rm_vision:lastest
-```
-
 构建开发容器
 
 ```
